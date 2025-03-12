@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Website with Animations</title>
+  <link rel="stylesheet" href="Animate.css">
+</head>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Fade in sections on scroll
+    const sections = document.querySelectorAll('section');
+    const fadeInOnScroll = () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.style.opacity = '1';
+        }
+      });
+    };
+
+    window.addEventListener('scroll', fadeInOnScroll);
+    fadeInOnScroll(); // Trigger on load
+  });
+</script>
+
+<body>
+  <div class="bg-ball bgb2"></div>
+  <div class="bg-ball bgb1"></div>
+  <div class="background">
+
+  </div>
+  <header>
+    <img src="pic/3line.png" alt="" class="img2">
+
+    <div class="logo">Plants<img src="pic/icons8-leaf-50.png" height="36px" width="36px" alt=""></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="icon">
+      <img src="pic/shopping-cart.png" alt="">&nbsp;&nbsp;&nbsp;<button>Sign in </button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Welcome to PlantLovers</h1>
+    <p>Your gateway to the world of beautiful plants.</p>
+
+    <div class="container">
+      <div class="box1"><img src="pic/Screenshot_13-8-2024_8522_pixabay.com-removebg-preview.png" alt="Plant 1">
+        <div class="txt1">Peace Lily</div>
+      </div>
+      <div class="box2"><img src="pic/Screenshot_13-8-2024_8946_www.bing.com-removebg-preview.png" alt="Plant 2">
+        <div class="txt2">Monstera Deliciosa</div>
+      </div>
+      <div class="box3"><img src="pic/Screenshot_11-8-2024_74559_3dcollective.es-removebg-preview.png" alt="Plant 3">
+        <div class="txt3">Chinese Money Plant</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="hero1">
+    <h2>About Us</h2>
+    <p>We are passionate about plants and provide you with the best selection of indoor and outdoor plants.</p>
+    <div class="main">
+      <div class="container2">
+        <div class="txt10">Life With <span>Nature <br></span>
+          Is Very Fun And <br> <span>Beautiful</span></div>
+
+        <div class="txt11">
+          Plants Lover Is An Indian NGO Dedicated To Planting Saplings And <br> Nurturing Them Into Trees. We
+          Create Urban And Rural Forests, Assist <br> Farmers With Fruit Tree Cultivation, Rejuvenate Lakes And Water
+          <br> Bodies,
+          And Install Solar Lamps In Villages. With Support From <br> Individuals And Corporations, We Drive Societal
+          Change
+          Through CSR <br> Initiatives. SayTrees Is Registered Under Section 12A And 80G Of <br> Income Tax And Holds An
+          FCRA
+          Certificate For Receiving International <br> Donations.</div>
+        <button>Learn More</button>
+      </div>
+
+      <div class="container3">
+        <img src="pic/ai-generated-8959797_1920.jpg" alt="">
+        <img src="pic/flowers-4423217_960_720.jpg" alt="">
+        <img src="pic/pr2000037542_card2_lg.avif" alt="">
+        <img src="pic/Top10IndoorPlants_YHG_main.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="hero2">
+    <h2>Shop</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="pic/Default_Generate_an_minimalistic_image_of_a_plant_in_a_pot_mak_3.png"
+          alt="Plant 1">
+        <p>Peace Lily &nbsp;&nbsp;<span>$65</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74410_3dcollective.es-removebg-preview.png"
+          alt="Plant 2">
+        <p>Areca Palm &nbsp;&nbsp;<span>$80</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74338_3dcollective.es-removebg.png" alt="Plant 3">
+        <p>Ficus Elastica &nbsp;&nbsp;<span>$45</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74438_3dcollective.es-removebg-preview.png"
+          alt="Plant 4">
+        <p>Calathea Orbifolia &nbsp;&nbsp;<span>$70</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74559_3dcollective.es-removebg-preview.png"
+          alt="Plant 5">
+        <p>Chinese Money plant &nbsp;&nbsp;<span>$90</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74755_www.blenderkit.com-removebg-preview.png"
+          alt="Plant 6">
+        <p>Africa Hosta &nbsp;&nbsp;<span>$65</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_12-8-2024_193923_3dcollective.es-removebg-preview.png"
+          alt="Plant 7">
+        <p>Areca Concinna &nbsp;&nbsp;<span>$35</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_13-8-2024_8322_www.bing.com-removebg-preview.png"
+          alt="Plant 8">
+        <p>Strelitzia Nicolai &nbsp;&nbsp;<span>$80</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_13-8-2024_8522_pixabay.com-removebg-preview.png" alt="Plant 9">
+        <p>Oiholo Adenium Bonsai &nbsp;&nbsp;<span>$70</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_13-8-2024_8657_www.bing.com-removebg-preview.png"
+          alt="Plant 10">
+        <p>Strelitzia Nicolai &nbsp;&nbsp;<span>$65</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_13-8-2024_8946_www.bing.com-removebg-preview.png"
+          alt="Plant 11">
+        <p>Monstera Deliciosa &nbsp;&nbsp;<span>$95</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/10-removebg-preview.png" alt="Plant 12">
+        <p>Rubber Fig &nbsp;&nbsp;<span>$55</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/11-removebg-preview.png" alt="Plant 13">
+        <p>Alocasia &nbsp;&nbsp;<span>$40</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/12-removebg-preview.png" alt="Plant 14">
+        <p>Yucca &nbsp;&nbsp;<span>$60</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/13-removebg-preview.png" alt="Plant 15">
+        <p>Century Plant &nbsp;&nbsp;<span>$55</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/15-removebg-preview.png" alt="Plant 16">
+        <p>Golden Pothos &nbsp;&nbsp;<span>$75</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/Screenshot_11-8-2024_74438_3dcollective.es-removebg-preview.png"
+          alt="Plant 17">
+        <p>Calathea Orbifolia &nbsp;&nbsp;<span>$60</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+      <div class="gallery-item"><img src="pic/ai-generated-8885646_640.png" alt="Plant 18">
+        <p>Dieffenbachia &nbsp;&nbsp;<span>$65</span></p>
+        <button>Buy</button>
+        <div class="cart"><button>Add to Cart</button></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="last">
+
+    <div class="prt1">
+      <h2>Customer Policies</h2>
+      <p>Contact Us</p>
+      <p>F&Q</p>
+      <p>Shipping</p>
+      <p>Cancellation</p>
+      <p>Return</p>
+      <p>Privacy Policy</p>
+      <p>Terms of Use</p>
+
+    </div>
+    <div class="prt2">
+      <h2>Our Address</h2>
+      <p>833001 - Ranchi</p>
+      <p>3rd Floor, Shree
+        Sai tower, Debuka
+        Nuirsign Home
+        Lane, Lalpur,
+        Ranchi(JH.)
+      </p><br>
+      <p>123-456-7890</p>
+    </div>
+    <div class="prt3">
+      <h2>We accept all<br>credit cards</h2>
+      <img src="pic/visa.png" alt="">
+      <img src="pic/card (2).png" alt="">
+      <img src="pic/card (3).png" alt="">
+      <img src="pic/shopping.png" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 PlantLovers. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

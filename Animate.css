@@ -1,0 +1,601 @@
+* {
+  font-family: 'Product sans';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #a5c3ab;
+  overflow-x: hidden;
+}
+
+header {
+  backdrop-filter: blur(6px);
+  background: rgba(165, 195, 171, 0.2);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+header .logo {
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgb(59, 96, 0);
+  margin-left: 50px;
+  margin-top: -12px;
+  float: left;
+  position: fixed;
+}
+
+header .log button {
+  width: 60px;
+  height: 28px;
+  border: none;
+  background-color: #2d6a4f;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.icon button {
+  width: 70px;
+  height: 35px;
+  border: none;
+  background-color: #2d6a4f;
+  color: white;
+  border-radius: 5px;
+  position: fixed;
+  margin-top: -3px;
+}
+
+.icon button:hover {
+  cursor: pointer;
+  background-color: #1e543bef;
+  transition: .3s;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: -130px;
+}
+
+header nav ul li {
+  margin-left: 20px;
+  padding: 20px;
+  margin-top: -10px;
+}
+
+header nav ul li a {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #1b4f1e;
+}
+
+header .icon img {
+  width: 28px;
+  height: 28px;
+  margin-left: -200px;
+  margin-top: -2px;
+  cursor: pointer;
+}
+
+header .img2 {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  margin-top: -5px;
+  visibility: hidden;
+}
+
+.bg-ball {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: -2;
+}
+
+.bgb1 {
+  background: #fde1f3;
+  opacity: 0.35;
+  top: -20px;
+  right: -20px;
+}
+
+.bgb2 {
+  background: #b7f4ff;
+  opacity: 0.3;
+  bottom: -20px;
+  left: -20px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  backdrop-filter: blur(70px);
+}
+
+.hero {
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.box1 img {
+  width: 80%;
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+
+}
+
+.box2 img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+
+}
+
+.box3 img {
+  width: 80%;
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+
+}
+
+.box1:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.box2:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.box3:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.txt1 {
+  color: rgb(54, 54, 54);
+}
+
+.txt2 {
+  color: rgb(54, 54, 54);
+}
+
+.txt3 {
+  color: rgb(54, 54, 54);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+  animation: slideInFromLeft 1s ease-out forwards;
+  margin-top: 60px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 20px 0 0 0;
+  animation: slideInFromRight 1.5s ease-out forwards;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1em;
+}
+
+.container2 {
+  width: 50%;
+  height: 700px;
+  float: left;
+  text-align: center;
+}
+
+.hero1 .txt10 {
+  font-size: 5vw;
+  color: rgb(54, 54, 54);
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.hero1 span {
+  color: #1b4f1e;
+}
+
+.hero1 .txt11 {
+  font-size: 1.3vw;
+  color: rgb(54, 54, 54);
+  margin-top: 20px;
+}
+
+.container2 button {
+  width: 90px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color: #2d6a4f;
+  margin-top: 40px;
+}
+
+.container2 button:hover {
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 3px 4px 6px#1b4f1e;
+}
+
+.container3 {
+  width: 50%;
+  float: left;
+  height: 700px;
+  gap: 30px;
+}
+
+.container3 img {
+  width: 45%;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 8%;
+  /* float: left; */
+  padding: 10px;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+  /* border: solid 1px  #2d6a4f4a; */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-grid button {
+  background-color: #2d6a4f;
+  border: none;
+  color: white;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.gallery-grid button:hover {
+  cursor: pointer;
+  transition: .3s;
+  background-color: #1c4633;
+  transform: scale(1.1);
+  box-shadow: 3px 4px 30px#1b4f1e62;
+}
+
+.gallery-item p {
+  color: #1c4633;
+}
+
+footer {
+  background-color: #2d6a4f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.hero {
+  height: 690px;
+}
+
+.hero1 {
+  height: 700px;
+}
+
+.hero2 {
+  height: 100%;
+}
+
+.last {
+  width: 100%;
+  height: 60vh;
+  background-color: #c8c8c8;
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.prt1 {
+  width: 30vw;
+  height: 100%;
+}
+
+.prt2 {
+  width: 30vw;
+  height: 100%;
+}
+
+.prt3 {
+  width: 30vw;
+  height: 100%;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+.last p {
+  font-size: 1.5vw;
+  text-align: start;
+  margin-left: 35%;
+}
+
+.last p:hover {
+  cursor: pointer;
+  color: rgb(91, 91, 91);
+  transition: .2s;
+}
+
+.prt3 img {
+  width: 4vw;
+  height: 7vh;
+}
+
+span {
+  color: #123023;
+}
+
+.cart button {
+  width: 90px;
+  background-color: #143d2a;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .last {
+    height: 34vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    display: grid;
+    height: 100%;
+  }
+
+  .hero1 {
+    height: 100%;
+  }
+
+  .hero {
+    height: 500px;
+  }
+
+  .hero2 {
+    height: 100%;
+  }
+
+  .container2 {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .container2 .txt10 {
+    font-size: 8vw;
+  }
+
+  .container3 {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .container3 img {
+    width: 47%;
+    padding: 10px;
+  }
+
+  .hero1 .txt11 {
+    font-size: 1.8vw;
+  }
+
+  .last {
+    height: 35vh;
+  }
+
+  .last .prt3 img {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media (max-width: 700px) {
+  ul li {
+    visibility: hidden;
+  }
+
+  header .icon img {
+    margin-left: -140px;
+  }
+
+  header .icon button {
+    margin-right: -30px;
+  }
+
+  header .logo {
+    margin-left: 35px;
+  }
+
+  header .img2 {
+    margin-left: -5px;
+  }
+
+  header .img2 {
+    visibility: visible;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: 100%;
+  }
+
+  .last {
+    height: 25vh;
+  }
+
+  .last .prt3 img {
+    display: block;
+    margin-left: 40%;
+    width: 6vw;
+    height: 4vh;
+  }
+}
+
+@media (max-width: 510px) {
+  .hero {
+    height: 100%;
+  }
+
+  .container3 img {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .container2 {
+    height: 500px;
+    margin-top: 30px;
+  }
+
+  .container3 {
+    height: 100%;
+  }
+
+  .hero1 .txt11 {
+    font-size: 3vw;
+  }
+
+  .hero1 {
+    height: 100%;
+  }
+
+  .hero2 {
+    height: 100%;
+  }
+
+  .last {
+    height: 26vh;
+  }
+
+  .last .prt3 img {
+    height: 3vh;
+  }
+
+  .icon button {
+    width: 55px;
+    height: 30px;
+  }
+
+}
